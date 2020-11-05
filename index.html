@@ -1,24 +1,57 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).on('mousemove', function(e){
-    $('div').css('top', e.pageY - 50);
-    $('div').css('left', e.pageX - 50);
-});
-</script>
-	<title></title>
-	<style type="text/css">
-		div {
-    position: absolute;
+<!DOCTYPE html>  
+<html>  
+ <head>  
+<title>HTML map tag</title>  
+	<style>       
+.png {
+  cursor: url("https://iili.io/3Q6Jr7.png"), auto;
 }
-	</style>
-</head>
-<body>
+.cursors {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100vh;
+}
+​
+.cursors > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 10px 2px;
+  text-align: center;
+}
+</style>
+  </head>  
+ <body> 
+ 	<center>
+ 		<div class="png">
+<img src="/Users/karan7k/Desktop/1madrasmed/Present/img1.png" alt="Creatures" usemap="#creaturemap">
+<map name="creaturemap">
 
-<center><img src="img1.png"></center>
-<div><img src="finalhand.png" width="280" height="280"></div>
-</body>
+<area onclick="turn();" id="rect" shape="rect" coords="79,545,26,502" alt="Doggo" nohref>
+<area shape="rect" coords="93,505,135,546" alt="Do" nohref>
+<area shape="rect" coords="149,506,193,547" alt="Dog" nohref>
+<area shape="rect" coords="208,506,258,548" alt="Dogg" nohref>
+​
+</map> 
+</div>
+
+<div id = "pop1" style="display: none;">
+  Hello my name is karan
+</div>
+
+</center> 
+ </body>
+ <script type="text/javascript">
+  function turn(){
+    document.getElementById("pop1").style.display="block";
+  }
+</script>
+
+
+
+
 
 </html>
